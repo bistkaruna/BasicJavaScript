@@ -564,12 +564,243 @@
 //     console.log(y);
     
 //      }
-//      console.log(x);
+//      console.log(x); 
 // }
-//  myFunc();             
+//  myFunc();        
+// DOM Manipulation
+
+// let result = document.getElementById("hello");
+// result.innerText= "I have many proof";
+// result.style.backgroundColor= "red";
+// result.style.color = "blue";
+// result.style.textAlign= "center";
+
+// result.setAttribute("class","newclass");
+// console.log(result.getAttribute("class"));
+
+// let ans = document.getElementsByClassName("mydiv")[0];
+// ans.innerHTML = "timi vaneko mana ta xito ";
+// console.log(ans);
+// ans.style.backgroundColor= "white";
+// ans.style.color = "red";
+// ans.style.textAlign= "center";
+
+// let output = document.getElementsByClassName("mydiv");
+// output[1].innerText= "nepal ma opportunities nai xaena";
+// output[1].style.backgroundColor= "purple"
+// output[1].style.color = "blue";
+// output[1].style.textAlign= "center";
+// output[1].style.padding = "10px";
+
+// let display = document.getElementsByTagName("span")[0];
+// display.innerText = "Nepal maa raj gareko xa";
+// display.style.backgroundColor ="yellow";
+// display.style.color="black";
+
+// let show = document.getElementsByTagName("span")[1];
+// show.innerText="hoss garera bola haii";
+// show.style.backgroundColor="gray";
+// show.style.color="white";
+
+// let h1 = document.createElement("h1");
+// h1.innerHTML="Task1";
+// document.body.append(h1);
+
+// let btnAdd = document.querySelector("#btnAdd");
+// btnAdd.style.backgroundColor ="green";
+// btnAdd.style.color ="#fff";
+// btnAdd.style.padding ="20px";
+// btnAdd.style.border ="none";
+// btnAdd.style.cursor ="pointer";
+
+// let btnRemove = document.querySelectorAll("button")[1];
+// btnRemove.style.backgroundColor ="red";
+// btnRemove.style.color ="#fff";
+// btnRemove.style.padding ="20px";
+// btnRemove.style.border ="none";
+// btnRemove.style.cursor ="pointer";
+
+// btnRemove.onclick = RemoveTask;
+
+// ADVANCE ARRAY METHOD
+
+// Tradition Way
+// function Add(a,b){
+//          let result = a+b;
+//        return result;
+//      };
+
+    //  let output = Add(4,5);
+    //  console.log(output);
+    
+// // Non Tradition Way
+// const Add = (a,b) => {
+//         let result = a+b;
+//         return result;
+//     };
+    
+//     let output = Add(4,5);
+//     console.log(output);
+
+// let arr = [4,5,2,3,7,8,9]
+// Find Method
+// let ans = arr.find ((value) => {
+//     let result = value > 7;
+//     return result;
+// });
+
+// console.log(ans);
+
+// let ans = arr.find((value) => value > 7);
+// console.log (ans);
+
+// const products = [
+//     {id:1,name:"Dr Martin", price:8000, inStock: true},
+//     {id:2,name:"Air Force 1", price:5000, inStock: true},
+//     {id:3,name:"Gold Star", price:80000, inStock: true},
+//     {id:4,name:"Martin", price:80000, inStock: true}];
+
+// let output = products.find((value)=> value.inStock);
+// console.log(output);
+
+// // FILTER
+// let arr = [4,5,2,3,7,8,9]
+// let ans = arr.filter((value) => value > 7);
+// console.log (ans);
+
+// const products = [
+//     {id:1,name:"Dr Martin", price:8000, inStock: true},
+//     {id:2,name:"Air Force 1", price:5000, inStock: true},
+//     {id:3,name:"Gold Star", price:2000, inStock: true},
+//     {id:4,name:"Nike", price:4000, inStock: false}];
+
+// let output = products.filter((value)=> !value.inStock);
+// console.log(output);
+
+// // SOME
+
+// let arr = [4,5,2,3,7,8,9]
+// let ans = arr.some((value) => value > 7);
+// console.log (ans);
+
+// const products = [
+//     {id:1,name:"Dr Martin", price:8000, inStock: true},
+//     {id:2,name:"Air Force 1", price:5000, inStock: false},
+//     {id:3,name:"Gold Star", price:2000, inStock: true},
+//     {id:4,name:"Nike", price:4000, inStock: false}];
+
+// let output = products.some((value)=> !value.inStock);
+// console.log(output);
+
+// // EVERY
+
+// let arr = [4,5,2,3,7,8,9]
+// let ans = arr.every((value) => value > 7);
+// console.log (ans);
+
+// const products = [
+//     {id:1,name:"Dr Martin", price:8000, inStock: true},
+//     {id:2,name:"Air Force 1", price:5000, inStock: false},
+//     {id:3,name:"Gold Star", price:2000, inStock: true},
+//     {id:4,name:"Nike", price:4000, inStock: false}];
+
+// let output = products.every((value)=> !value.inStock);
+// console.log(output);
+
+// // FOR EACH
+
+// let arr = [4,5,2,3,7,8,9]
+// let ans = arr.forEach((value) => value > 7);
+// console.log (ans);
+
+// const products = [
+//     {id:1,name:"Dr Martin", price:8000, inStock: true},
+//     {id:2,name:"Air Force 1", price:5000, inStock: false},
+//     {id:3,name:"Gold Star", price:2000, inStock: true},
+//     {id:4,name:"Nike", price:4000, inStock: false}];
+
+// let output = products.forEach((value)=> !value.inStock);
+// console.log(output);
+
+// // MAP
+
+// let arr = [4,5,2,3,7,8,9]
+// let ans = arr.map((value) => value > 7);
+// console.log (ans);
+
+// const products = [
+//     {id:1,name:"Dr Martin", price:8000, inStock: true},
+//     {id:2,name:"Air Force 1", price:5000, inStock: false},
+//     {id:3,name:"Gold Star", price:2000, inStock: true},
+//     {id:4,name:"Nike", price:4000, inStock: false}
+// ];
+
+// let output = products.map((value)=> value.name);
+// console.log(output);
+// let h1 = document.createElement("h1");
+// h1.innerHTML = output;
+// document.body.append(h1);
+
+// REDUCE
+
+// let arr = [4,5,2,3,7,8,9]
+// let ans = arr.reduce((accum, curValue) => accum+ curValue);
+// console.log (ans);
+
+// const products = [
+//     {id:1,name:"Dr Martin", price:8000, inStock: true},
+//     {id:2,name:"Air Force 1", price:5000, inStock: false},
+//     {id:3,name:"Gold Star", price:2000, inStock: true},
+//     {id:4,name:"Nike", price:4000, inStock: false},
+// ];
+
+// let output = products.reduce((total, curValue)=> total + curValue.price,0);
+// console.log(output);
+
+// const haeding = document.getElementById("heading");
+// const box1 = document.getElementById("box1");
+// const addbtn = document.getElementById("btnAdd");
+// let input = document.getElementById("newInput")
 
 
+// console.log("haeding");
+// console.log("box1");
+// console.log("btnAdd");
+// addbtn.addEventListener("click",() =>{
+//     console.log("clicked");
+//     heading.innerText="how are you";
+//     heading.style.backgroundColor="blue";
+//     heading.style.color="black";
+//     heading.style.padding="20px";
+// })
 
+// addbtn.addEventListener("dblclick",()=>{
+//     addbtn.style.backgroundColor="purple";
+//     addbtn.style.color="red";
+//     addbtn.style.padding="20px";
+//     addbtn.style.border="none";
+// })
+
+// input.addEventListener("change",(e)=>{
+//     console.log(e.target.value);
+// })
+
+const input= document.getElementById("myinput");
+const addbtn= document.getElementById("addbtn");
+const removebtn= document.getElementById("removebtn");
+
+const myFunc = ()=>{
+localStorage.setItem("key1",JSON.stringify({name:"karuna bist",age:19}));
+};
+addbtn.addEventListener("click",myFunc);
+
+removebtn.addEventListener("click",()=> {
+   localStorage.clear();
+});
+if (localStorage.getItem("key1")){
+    console.log(JSON.parse(localStorage.getItem("key1")));
+    
+}
 
 
 
