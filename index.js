@@ -785,22 +785,234 @@
 //     console.log(e.target.value);
 // })
 
-const input= document.getElementById("myinput");
-const addbtn= document.getElementById("addbtn");
-const removebtn= document.getElementById("removebtn");
+// const input= document.getElementById("myinput");
+// const addbtn= document.getElementById("addbtn");
+// const removebtn= document.getElementById("removebtn");
 
-const myFunc = ()=>{
-localStorage.setItem("key1",JSON.stringify({name:"karuna bist",age:19}));
-};
-addbtn.addEventListener("click",myFunc);
+// const myFunc = ()=>{
+// localStorage.setItem("key1",JSON.stringify({name:"karuna bist",age:19}));
+// };
+// addbtn.addEventListener("click",myFunc);
 
-removebtn.addEventListener("click",()=> {
-   localStorage.clear();
-});
-if (localStorage.getItem("key1")){
-    console.log(JSON.parse(localStorage.getItem("key1")));
+// removebtn.addEventListener("click",()=> {
+//    localStorage.clear();
+// });
+// if (localStorage.getItem("key1")){
+//     console.log(JSON.parse(localStorage.getItem("key1")));
     
+// }
+
+
+// math(object)
+
+// console.log(Math.random());
+// // pow
+// console.log(Math.pow(2,6));
+// // square
+// console.log(Math.sqrt(25));
+
+// let num=4.7;
+// let result=Math.round(num);
+// console.log(result);
+
+// floor
+// let num =4.2;
+// let result=Math.floor(num);
+// console.log(result);
+
+// ceil
+// let num=4.2;
+// let result=Math.ceil(num);
+// console.log(result);
+
+// trunc
+// let num=4.2;
+// let result=Math.trunc(num);
+// console.log(result);
+
+// abs
+// function AbsValue(a,b){
+//     return Math.abs(a-b);
+// }
+
+// letresult = AbsValue(3,7);
+// console.log(result);
+
+// console.log(Math.PI);
+
+// // Area OF Ciecle
+
+// function AreaOfCircle(radius){
+//     return Math.PI*radius*radius;
+// }
+
+// letresult =AreaOfCircle(5);
+// console.log(result);
+
+// OTP
+
+// function GenerateOTP(){
+//     return Math.floor(100000+Math.random()*900000);
+// }
+
+// let output=GenerateOTP();
+// console.log(output);
+
+// Date
+// const now =new Date();
+// console.log(now);
+
+// let year =now.getFullYear();
+// console.log(year);
+
+
+// let month =now.getMonth();
+// console.log(month);
+
+// let day=now.getDay();
+// console.log(day);
+
+// let hour=now.getHours();
+// console.log(hour);
+
+
+
+// setTimeout(()=>{
+//     console.log("aja kabigya ko birthday ho hami lai party chahinxa")
+// },2000);
+
+
+// setInterval(() => {
+//     console.log("aja kabigya ko birthday ho hami lai party chahinxa")
+// },2000);
+
+// let intervalId=setInterval(()=>{
+//     console.log("aja kabigya ko birthday ho hami lai party chahinxa");
+// },1000);
+
+// setTimeout(()=>{
+//     clearInterval(intervalId);
+// },5000);
+
+// CLOCK
+
+// function updateClock(){
+//     let CLOCK=document.querySelector(".clock")
+//     let now=new Date()
+//     let hours=now.getHours().toString().padStart(2,"0");
+//     let minutes =now.getMinutes().toString().padStart(2,"0");
+//     let seconds=now.getSeconds().toString().padStart(2,"0");
+
+//     CLOCK.innerHTML=`${hours}:${minutes}:${seconds}`;
+// }
+// setInterval(updateClock,1000);
+
+// function BankAccount(customerName,balance){
+//     this.customerName=customerName;
+//     this.balance=balance;
+//     this.accountNumber=Date.now()
+// }
+
+// const kabigyaAccount=new BankAccount("kabigya adhikari",5000);
+// const karunaAccount=new BankAccount("karuna bistt",9000);
+
+// console.log( kabigyaAccount);
+// console.log(karunaAccount);
+
+// class(OOP)
+
+// class BankAccount{
+
+//     constructor(customerName,balance){
+//         this.customerName=customerName;
+//         this.balance=balance;
+//         this.accountNumber=Date.now();
+//     }
+
+//     deposit(amount){
+//         this.balance+=amount
+//     }
+
+//     withdraw(amount){
+//         this.balance-=amount;
+//     }
+// }
+
+// const anamikaAccount=new BankAccount("anamika joshi",5000);
+// const salinaAccount=new BankAccount("salina maharjan",5000);
+// salinaAccount.deposit(3000);
+// anamikaAccount.withdraw(4000);
+// console.log(anamikaAccount,salinaAccount);
+
+
+// class SavingAccount extends BankAccount{
+    
+//     constructor(customerName,balance){
+//         super(customerName,balance);
+//         this.transactionLimit=50000;
+        
+//     }
+// }
+
+//     takepersonalLoan(amount,taxRate) {
+//         let ans=amount+(amount*taxRate)/100;
+//         this.console.log(`Your Personal loan with Interest is:${ans}`);
+//     }
+
+    
+//     const anamikaAccount=new SavingAccount("anamika joshi",6000);
+//     const salinaAccount=new SavingAccountt("salina maharjan",5000);
+//     salinaAccount.takepersonalLoan(9000,12);
+//     console.log(salinaAccount);
+   
+
+
+// }
+
+
+
+
+
+
+class User{
+    static students =0;
+    constructor(name,age,isMarried){
+        this.name=name;
+        this.age=age;
+        this.isMarried=isMarried;
+        User.student +=1;
+    }
+
+    static sortByAge(a,b){
+        return a.age-b.age;
+    }
 }
+
+let user1=new User("karuna bist",19,"notmarried");
+let user2=new User("pfrerana bist",18,"notmarried");
+let user3=new User("Nikhil bist",15,"notmarried");
+let user4=new User("Renu bist",42,"married");
+
+let users=[user1,user2,user3,user4];
+let output=users.sort(User.sortByAge);
+console.log(output);
+console.log(User.studentUsers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
